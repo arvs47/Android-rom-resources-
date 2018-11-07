@@ -7,3 +7,7 @@ http://4pda.ru/pages/go/?u=https%3A%2F%2Ftranslate.googleusercontent.com%2Ftrans
 
 
 https://translate.googleusercontent.com/translate_c?depth=1&hl=en&rurl=translate.google.com&sl=ru&sp=nmt4&tl=en&u=http://4pda.ru/forum/index.php%3Fshowtopic%3D515043&xid=17259,15700021,15700124,15700149,15700186,15700191,15700201&usg=ALkJrhg3yn151XFOkWryW6zzA72WYWgQlQ
+
+https://forum.xda-developers.com/android/software/guide-how-to-develop-modify-roms-t3616040 
+
+https://forum.xda-developers.com/showthread.php?t=1908008
