@@ -11,3 +11,4 @@ https://translate.googleusercontent.com/translate_c?depth=1&hl=en&rurl=translate
 https://forum.xda-developers.com/android/software/guide-how-to-develop-modify-roms-t3616040 
 
 https://forum.xda-developers.com/showthread.php?t=1908008
+https://forum.xda-developers.com/chef-central/android/tool-classykitchen-android-roms-t3862584#post78086777
