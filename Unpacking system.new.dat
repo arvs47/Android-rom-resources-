@@ -1,0 +1,53 @@
+Unpacking system.new.dat 
+! UBUNTU 
+
+
+The most lazy can disassemble the firmware using the script System_Extractor-Linux 
+or direct link: https://github.com/mat…nux/archive/master.zip 
+
+Unpack the archive with the firmware in any folder. 
+We download the script by reference and unzip to any folder. 
+Run the ext file (if you swear by the absence of Java, just skip by pressing y; you only need Java to pack). 
+Now select unpacking by pressing the button 1 and then Enter. 
+A new folder named extract_ * will appear next to the ext file and the tools folder. Copy the system.new.dat and system.transfer.list files into it. 
+After copying the files, press Enter and wait. After some time, you will need to press Enter again, enter the administrator password and tap Enter again. 
+Is done. The contents of the system in the folder extract _ * / output. 
+
+Manual mode: 
+
+  We unpack archive with firmware in any folder (for example, in rom): 
+
+  $ mkdir ~ / rom 
+  $ unzip path_to_aphiva -d ~ / rom / 
+  Download the tools we need in this folder: 
+
+  $ cd ~ / rom 
+  $ wget https://github.com/xpirt/sdat2img/raw/master/sdat2img.py 
+  Run the script: 
+
+  $ chmod + x sdat2img.py 
+  $ ./sdat2img.py system.transfer.list system.new.dat system.img 
+  It converts the system.new.dat file into a raw image named system.img.  Mount the image to the mnt subfolder: 
+
+  $ mkdir mnt 
+  $ sudo mount -t ext4 -o loop system.img ~ / rom / mnt 
+
+
+Android directory structure 
+
+After unpacking the system, the following directory structure will appear: 
+
+app - pre-installed applications with standard privileges; 
+priv-app - pre-installed applications with increased privileges, including some system components; 
+bin - binary files of the ELF format, analogue of the / bin and / usr / bin directories on Linux. Contains various system components used by higher-level system components; 
+etc - setup files. The complete analog of / etc in Linux, used, however, only by those same system components. Android applications store individual settings in directories / data / data /; 
+fonts - fonts. The default contains only branded Roboto fonts; 
+framework - libraries of Java classes used by the system and applications. The framework-res.apk file is also located there, containing a complete description of the operating system interface, including all graphic files; 
+lib and lib64 are the Linux libraries used by low-level system components. Analogue of the / lib and / usr / lib directories on Linux, including standard libraries such as libc, libz, libssl. On devices with an ARMv7 architecture and below, the lib64 directory will be absent; 
+media - media files: ringtones, notification sounds, interface sounds, and OS boot animations; 
+tts - files necessary for speech synthesizer; 
+usr is the directory that usually contains the files needed to run applications from the bin directory. Essentially, the analogue / usr / share; 
+vendor - files supplied by the device manufacturer. Usually contains binary firmware for various iron components, for example a Wi-Fi module; 
+xbin - optional directory; custom firmwares use it to store things like the bash interpreter, SSH, PowerTOP, BusyBox, and other useful tools; 
+build.prop - file containing information about the build, as well as various low-level settings; 
+addon.d - contains scripts that are run after installing the firmware. Here GApps prescribe their own script, thanks to which they are reborn after reinstalling the firmware.
